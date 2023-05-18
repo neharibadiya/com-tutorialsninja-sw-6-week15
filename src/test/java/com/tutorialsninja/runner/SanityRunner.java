@@ -1,6 +1,6 @@
 package com.tutorialsninja.runner;
 
-import com.cucumber.listener.Reporter;
+import com.vimalselvam.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/java/resources/featurefile",
-        glue = "com/tutorialsninja/demo/cucumber",
+        glue = "com/tutorialsninja",
         plugin = {"pretty", "html:target/cucumber-report/cucumber.html",
                 "com.cucumber.listener.ExtentCucumberFormatter:target/Extent_Reports/report.html",
                 "json:target/RunCuke/cucumber.json"},
